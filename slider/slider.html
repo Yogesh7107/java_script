@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+   text-align: center;
+   margin-top: 10%;
+   /* border: 2px solid black; */
+}
+#slider{
+    width: 500px;
+    height: 500px;
+   border: 15px solid black;
+}
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR4RSw-r0qafvf1XBaFoELb-p5YZXQbcvoFk2Caj8O4Q&s" id="slider" alt="Slider">
+    </div>
+
+    <script>
+        const images = [
+    "https://www.koimoi.com/wp-content/new-galleries/2022/04/taarak-mehta-ka-ooltah-chashma-did-you-know-jethalal-aka-dilip-joshi-almost-quit-acting-right-before-tmkoc-was-offered-to-him-002.jpg",
+    "https://img.naidunia.com/naidunia/ndnimg/15042023/15_04_2023-jethalal_babita_ji_video_.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR4RSw-r0qafvf1XBaFoELb-p5YZXQbcvoFk2Caj8O4Q&s",
+    "https://static.onecompiler.com/images/users/3x8wpwdu2/p2114251265.jpg"
+];
+
+let index = 0;
+const slider = document.getElementById("slider");
+
+setInterval(function() {
+    slider.src = images[index];
+    index++;
+    if (index === images.length) {
+        index = 0;
+    }
+}, 1000);
+
+    </script>
+</body>
+</html>
